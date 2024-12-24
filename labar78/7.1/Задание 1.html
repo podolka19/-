@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">  
+<title>Украшения из бисера</title>
+<link rel="icon" href="icons8-кольца-и-серьги-100.png" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header >
+        <div><img src="лого.jpg" height="70" width="70"></div>
+        <h1>Изделья из бисера ручной работы</h1>
+        <h3>Волшебство в каждом бисеринке: создайте свой уникальный стиль</h3>
+        <nav>
+            <ul class="nav">
+                <div class="nav__flex">
+                    <li><a class="nav_button" href="лого.jpg">Главная</a></li>
+                    <li><a class="nav_button" href="#grid">Изделия</a></li>
+                    <li><a class="nav_button" href="#slide">Где преобрести</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="grid">
+        
+        <div class="flex">
+            <p>
+                <img src="photo_1_2024-12-21_20-33-30.jpg" width="400px" height="400px" class="img">
+            </p>
+            <div class="line1">
+                <div class="line1__price">10$</div>
+                <div class="line1__btn">Заказать</div>
+            </div>
+        </div>
+
+
+        <div class="flex">
+            <p>
+                <img src="photo_2024-12-21_20-58-32.jpg" width="400px" height="400px" class="img">
+            </p>
+            <div class="line1">
+                <div class="line1__price">10$</div>
+                <div class="line1__btn">Заказать</div>
+            </div>
+        </div>
+
+
+        <div class="flex">
+            <p>
+                <img src="photo_3_2024-12-21_20-33-30.jpg" width="400px" height="400px" class="img">
+            </p>
+            <div class="line1">
+                <div class="line1__price">10$</div>
+                <div class="line1__btn">Заказать</div>
+            </div>
+        </div>
+
+        <div class="flex">
+            <p>
+                <img src="photo_4_2024-12-21_20-33-30.jpg" width="400px" height="400px" class="img">
+            </p>
+            <div class="line1">
+                <div class="line1__price">10$</div>
+                <div class="line1__btn">Заказать</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <div id="sidebar">
+        <h3>Для чего необходимы изделия из бисера?<h3>
+            <p>Изделия из бисера — это не просто аксессуары, а значимые элементы культуры и самовыражения. Они позволяют людям творить, экспериментировать и создавать уникальные вещи, отражающие их стиль и индивидуальность. От моды до интерьеров, от подарков до самовыражения, изделием из бисера можно воспользоваться в различных сферах. Бисероплетение становится всё более популярным хобби, открывающим безграничные возможности для творчества.</p><br>
+            <h3>Виды изделий</h3>
+            <p><ul>
+                <li>Ожерелья</li>
+                <li>Брошки</li>
+                <li>Серьги</li>
+                <li>Брелки</li>
+                <li>Браслеты</li>
+            </ul></p><br>
+        <h3>Волшебство в каждом бисеринке: создайте свой уникальный стиль</h3>
+            <p>Откройте мир изысканных изделий из бисера, где каждое творение – это не просто аксессуар, а настоящая история. Наша коллекция вдохновляет на самовыражение, наполняет жизнь яркими цветами и неповторимыми узорами, создавая атмосферу уюта и гармонии.  
+                Выбирайте из множества вариантов – от элегантных браслетов до потрясающих бус, которые подчеркнут вашу индивидуальность и стиль. Каждое изделие выполнено с любовью и вниманием к деталям, что делает их идеальным дополнением к любому образу.  
+                Погрузитесь в творчество, эксперименты и безграничные возможности, которые открывает бисер. Превратите свое вдохновение в реальность и поделитесь им с окружающими. Не упустите шанс сделать мир вокруг себя ярче с нашими уникальными изделиями. Мы уверены, что каждая работа станет отражением вашего внутреннего мира и поможет вам выделиться из толпы.  
+                С нами каждый шаг – это искусство. Создавайте, вдохновляйте, удивляйте!</p><br>
+    </div> 
+    <div id="slide" style="border: 1px solid black;
+   width: 100%;
+   height: 100px;
+   display: grid;
+   overflow: hidden;
+   grid-template-columns: 5% 90% 5%;
+   position: absolute;
+   top: 1300px;">
+    
+    <button onclick="prev()"><p><</p></button>
+       <div style="display:grid;
+       grid-template-columns: 350px 350px 350px 350px;
+       gap: 200px;" id="s">
+           <div><i class="fa-brands fa-instagram"></i><p>@p_podolka</p></div>
+           <div><i class="fa-brands fa-telegram"></i><p>@p_podolka</p></div>
+           <div><i class="fa-regular fa-envelope-open"></i><p>polinapodolk@gmail.com</p></div>
+           <div><i class="fa-solid fa-phone"></i><p>+375297232657</p></div>
+           
+       </div>
+       <button onclick="next()"><p>></p></button>
+   </div>
+</body>
+
+
+<script>
+    let i=0;
+    function next() {
+        slide=document.getElementById('s');
+        i+=400;
+        slide.style.marginLeft = i + 'px';
+        if (i>=1200) {
+            i = -400;
+        }
+    }
+    function prev() {
+        slide=document.getElementById('s');
+        i-=400;
+        slide.style.marginLeft = i + 'px';
+        if (i<=-1200) {
+            i = -100;
+        }
+    }
+</script>
+</html>
